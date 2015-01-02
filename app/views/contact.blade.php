@@ -1,9 +1,6 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Contact us</title>
-    </head>
-    <body>
+@extends('layouts.user')
+
+@section('content')
+
         <h2>Contact us page... Wellcome {{ $name }}</h2>
-    </body>
-</html>
+@stop

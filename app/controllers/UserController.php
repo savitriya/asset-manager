@@ -36,18 +36,17 @@ class UserController extends \BaseController {
 		//return 'Create the new user, given the post data..';
 		//return Input::all();
 		//return Input::get('username');
+		$input=Input::all();
 
-		if(!$this->user->isValid(Input::all()))
+		$this->user->fill(Input::all());
+
+		if(!$this->user->fill($input)->isValid())
 		{
 			return Redirect::back()->withInput()->withErrors($this->user->errors);
 		}
 
 
-
-		$user=new User;
-		$user->username=Input::get('username');
-		$user->password=Hash::make(Input::get('password'));
-		$user->save();
+		$this->user->save();
 
 		//return Redirect::to('/users');
 		return Redirect::route('users.index');

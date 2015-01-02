@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'asset-management',
+			'database'  => 'asset-manager',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',
